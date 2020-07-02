@@ -1,5 +1,4 @@
 import pygame
-import random
 
 # creating the data structure for pieces
 # setting up global vars
@@ -12,7 +11,7 @@ import random
 
 """
 10 x 20 square grid
-shapes: S, Z, I, O, J, L, T
+shapes: S, Z, C, X, J, L, T
 represented in order by 0 - 6
 """
 
@@ -53,7 +52,7 @@ Z = [['.....',
       '.0...',
       '.....']]
 
-I = [['..0..',
+C = [['..0..',
       '..0..',
       '..0..',
       '..0..',
@@ -64,7 +63,7 @@ I = [['..0..',
       '.....',
       '.....']]
 
-O = [['.....',
+X = [['.....',
       '.....',
       '.00..',
       '.00..',
@@ -133,7 +132,7 @@ T = [['.....',
       '..0..',
       '.....']]
 
-shapes = [S, Z, I, O, J, L, T]
+shapes = [S, Z, C, X, J, L, T]
 shape_colors = [(0, 255, 0), (255, 0, 0), (0, 255, 255), (255, 255, 0), (255, 165, 0), (0, 0, 255), (128, 0, 128)]
 # index 0 - 6 represent shape
 
@@ -141,40 +140,53 @@ shape_colors = [(0, 255, 0), (255, 0, 0), (0, 255, 255), (255, 255, 0), (255, 16
 class Piece(object):
     pass
 
+
 def create_grid(locked_positions={}):
     pass
+
 
 def convert_shape_format(shape):
     pass
 
+
 def valid_space(shape, grid):
     pass
+
 
 def check_lost(positions):
     pass
 
+
 def get_shape():
     pass
 
-def draw_text_middle(text, size, color, surface):  
+
+def draw_text_middle(text, size, color, surface):
     pass
-   
+
+
 def draw_grid(surface, row, col):
     pass
+
 
 def clear_rows(grid, locked):
     pass
 
+
 def draw_next_shape(shape, surface):
     pass
+
 
 def draw_window(surface):
     pass
 
+
 def main():
     pass
 
+
 def main_menu():
     pass
+
 
 main_menu()  # start game
