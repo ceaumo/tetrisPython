@@ -1,4 +1,5 @@
 import pygame
+import random
 
 # creating the data structure for pieces
 # setting up global vars
@@ -138,11 +139,26 @@ shape_colors = [(0, 255, 0), (255, 0, 0), (0, 255, 255), (255, 255, 0), (255, 16
 
 
 class Piece(object):
-    pass
+    rows = 20  # y
+    columns = 10  # x
+
+    def __init__(self, column, row, shape):
+        self.x = column
+        self.y = row
+        self.shape = shape
+        self.color = shape_colors[shapes.index(shape)]
+        self.rotation = 0  # number from 0-3
 
 
 def create_grid(locked_positions={}):
-    pass
+    grid = [[(0, 0, 0) for x in range(10)] for x in range(20)]
+
+    for i in range(len(grid)):
+        for j in range(len(grid[i])):
+            if (j, i) in locked_positions:
+                c = locked_positions[(j, i)]
+                grid[i][j] = c
+    return grid
 
 
 def convert_shape_format(shape):
@@ -158,7 +174,9 @@ def check_lost(positions):
 
 
 def get_shape():
-    pass
+    global shapes, shape_colors
+
+    return Piece(5, 0, random.choice(shapes))
 
 
 def draw_text_middle(text, size, color, surface):
