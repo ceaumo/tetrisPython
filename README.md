@@ -16,3 +16,6 @@ The code style is managed by Pylama tool. To check if you respect all code style
 ```bash
 pylama -o pylama.ini
 ```
+
+## Référence
+- https://techwithtim.net/tutorials/game-development-with-python/tetris-pygame/tutorial-1/
