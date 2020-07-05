@@ -15,4 +15,4 @@ init:
 
 
 clean:
-	rm -rf .vscode .idea 
+	rm -rf .vscode .idea

@@ -12,7 +12,7 @@ import random
 
 """
 10 x 20 square grid
-shapes: S, Z, C, X, J, L, T
+shapes: S, Z, I, O, J, L, T
 represented in order by 0 - 6
 """
 
@@ -27,7 +27,6 @@ block_size = 30
 
 top_left_x = (s_width - play_width) // 2
 top_left_y = s_height - play_height
-
 
 # SHAPE FORMATS
 
@@ -53,7 +52,7 @@ Z = [['.....',
       '.0...',
       '.....']]
 
-C = [['..0..',
+I = [['..0..',
       '..0..',
       '..0..',
       '..0..',
@@ -64,7 +63,7 @@ C = [['..0..',
       '.....',
       '.....']]
 
-X = [['.....',
+O = [['.....',
       '.....',
       '.00..',
       '.00..',
@@ -133,8 +132,10 @@ T = [['.....',
       '..0..',
       '.....']]
 
-shapes = [S, Z, C, X, J, L, T]
+shapes = [S, Z, I, O, J, L, T]
 shape_colors = [(0, 255, 0), (255, 0, 0), (0, 255, 255), (255, 255, 0), (255, 165, 0), (0, 0, 255), (128, 0, 128)]
+
+
 # index 0 - 6 represent shape
 
 
@@ -225,12 +226,12 @@ def main():
     locked_positions = {}  # (x,y):(255,0,0)
     grid = create_grid(locked_positions)
 
-    change_piece = False
+    # change_piece = False
     run = True
     current_piece = get_shape()
-    next_piece = get_shape()
-    clock = pygame.time.Clock()
-    fall_time = 0
+    # next_piece = get_shape()
+    # clock = pygame.time.Clock()
+    # fall_time = 0
 
     while run:
         for event in pygame.event.get():

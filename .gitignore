@@ -142,6 +142,3 @@ cython_debug/
 
 # Pycharm files
 .idea
-
-# scores files
-scores.txt
